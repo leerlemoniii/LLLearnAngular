@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+
+  rv_map:
+    container_name: rvmap
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '4201:4200'
